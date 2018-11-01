@@ -9,6 +9,7 @@ gem 'puma'
 gem 'rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
+gem 'omniauth-github'
 
 group :development do
   gem 'byebug', platforms: [:mri]
