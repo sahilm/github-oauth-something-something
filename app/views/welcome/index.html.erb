@@ -3,6 +3,9 @@
   <%= form_tag(clone_path) do %>
     <%= button_tag('clone test-repo in /tmp') %>
   <% end %>
+  <%= form_tag(push_path) do %>
+    <%= button_tag('commit and push test-repo') %>
+  <% end %>
 <% else %>
   <%= link_to 'Sign in with Github', '/auth/github' %>
 <% end %>
