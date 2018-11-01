@@ -1,5 +1,8 @@
 <% if $token %>
   Oauth token: <%= $token %>
+  <%= form_tag(clone_path) do %>
+    <%= button_tag('clone test-repo in /tmp') %>
+  <% end %>
 <% else %>
   <%= link_to 'Sign in with Github', '/auth/github' %>
 <% end %>
