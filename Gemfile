@@ -1,7 +1,19 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+ruby '2.5.3'
 
-gem "rails"
+gem 'puma'
+gem 'rails'
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', require: false
+
+group :development do
+  gem 'byebug', platforms: [:mri]
+  gem 'listen'
+  gem 'spring'
+  gem 'spring-watcher-listen'
+  gem 'web-console'
+end
